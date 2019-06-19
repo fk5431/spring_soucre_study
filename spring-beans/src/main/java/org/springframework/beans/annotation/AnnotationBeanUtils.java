@@ -35,6 +35,7 @@ import org.springframework.util.StringValueResolver;
  * @author Juergen Hoeller
  * @since 2.0
  */
+//拷贝注解值到某个类
 public abstract class AnnotationBeanUtils {
 
 	/**
@@ -63,15 +64,20 @@ public abstract class AnnotationBeanUtils {
 			String... excludedProperties) {
 
 		Set<String> excluded = new HashSet<>(Arrays.asList(excludedProperties));
+		//获取注解上的方法
 		Method[] annotationProperties = ann.annotationType().getDeclaredMethods();
+		//同过bean对象获取bean的定义
 		BeanWrapper bw = PropertyAccessorFactory.forBeanPropertyAccess(bean);
 		for (Method annotationProperty : annotationProperties) {
+			//获取注解方法上的值
 			String propertyName = annotationProperty.getName();
 			if (!excluded.contains(propertyName) && bw.isWritableProperty(propertyName)) {
 				Object value = ReflectionUtils.invokeMethod(annotationProperty, ann);
 				if (valueResolver != null && value instanceof String) {
+					//处理value的值，StringValueResolver的作用比如处理占位符${}
 					value = valueResolver.resolveStringValue((String) value);
 				}
+				//把该值设置到bean定义上。
 				bw.setPropertyValue(propertyName, value);
 			}
 		}

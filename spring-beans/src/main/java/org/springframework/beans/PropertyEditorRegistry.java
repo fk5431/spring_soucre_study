@@ -34,6 +34,7 @@ import org.springframework.lang.Nullable;
  * @see BeanWrapper
  * @see org.springframework.validation.DataBinder
  */
+//注册 保存属性 编辑器
 public interface PropertyEditorRegistry {
 
 	/**
