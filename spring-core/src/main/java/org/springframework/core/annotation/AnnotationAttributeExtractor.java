@@ -32,12 +32,14 @@ import org.springframework.lang.Nullable;
  * @param <S> the type of source supported by this extractor
  * @see SynthesizedAnnotationInvocationHandler
  */
+//注解属性
 interface AnnotationAttributeExtractor<S> {
 
 	/**
 	 * Get the type of annotation that this extractor extracts attribute
 	 * values for.
 	 */
+	//获取注解类型
 	Class<? extends Annotation> getAnnotationType();
 
 	/**

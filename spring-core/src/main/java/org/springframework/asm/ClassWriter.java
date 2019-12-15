@@ -52,6 +52,7 @@ public class ClassWriter extends ClassVisitor {
    *
    * @see #ClassWriter(int)
    */
+  //自动计算最大堆栈大小和最大本地数的标志
   public static final int COMPUTE_MAXS = 1;
 
   /**
@@ -63,6 +64,7 @@ public class ClassWriter extends ClassVisitor {
    *
    * @see #ClassWriter(int)
    */
+  //从零开始自动计算方法堆栈映射帧的标志
   public static final int COMPUTE_FRAMES = 2;
 
   // Note: fields are ordered as in the ClassFile structure, and those related to attributes are

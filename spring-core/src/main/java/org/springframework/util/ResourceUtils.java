@@ -45,6 +45,7 @@ import org.springframework.lang.Nullable;
  * @see org.springframework.core.io.UrlResource
  * @see org.springframework.core.io.ResourceLoader
  */
+//支持从指定的位置加载资源
 public abstract class ResourceUtils {
 
 	/** Pseudo URL prefix for loading from the class path: "classpath:". */

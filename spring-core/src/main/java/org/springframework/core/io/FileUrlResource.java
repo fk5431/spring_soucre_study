@@ -43,6 +43,7 @@ import org.springframework.util.ResourceUtils;
  * @author Juergen Hoeller
  * @since 5.0.2
  */
+//文件URL资源
 public class FileUrlResource extends UrlResource implements WritableResource {
 
 	@Nullable

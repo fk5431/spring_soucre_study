@@ -38,6 +38,7 @@ import org.springframework.util.StringValueResolver;
  * @author Juergen Hoeller
  * @since 2.5.2
  */
+//使用map 作为 alias的缓存
 public class SimpleAliasRegistry implements AliasRegistry {
 
 	/** Logger available to subclasses. */

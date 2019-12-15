@@ -33,6 +33,11 @@ import static org.junit.Assert.*;
 public class BooleanComparatorTests {
 
 	@Test
+	public void test(){
+		System.out.println(true ^ false);
+	}
+
+	@Test
 	public void shouldCompareWithTrueLow() {
 		Comparator<Boolean> c = new BooleanComparator(true);
 		assertThat(c.compare(true, false), is(-1));

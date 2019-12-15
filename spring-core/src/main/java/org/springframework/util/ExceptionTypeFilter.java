@@ -25,6 +25,7 @@ import java.util.Collection;
  * @author Stephane Nicoll
  * @since 4.1
  */
+//异常类型的过滤器
 public class ExceptionTypeFilter extends InstanceFilter<Class<? extends Throwable>> {
 
 	public ExceptionTypeFilter(Collection<? extends Class<? extends Throwable>> includes,

@@ -40,6 +40,7 @@ import org.springframework.lang.Nullable;
  * @author Sam Brannen
  * @since May 2, 2001
  */
+//可以用来计算运行时间？
 public class StopWatch {
 
 	/**

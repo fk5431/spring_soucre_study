@@ -29,6 +29,7 @@ import java.nio.channels.WritableByteChannel;
  * @since 3.1
  * @see java.io.OutputStream
  */
+//支持写的资源
 public interface WritableResource extends Resource {
 
 	/**

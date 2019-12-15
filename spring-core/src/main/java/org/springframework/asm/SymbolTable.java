@@ -37,6 +37,7 @@ package org.springframework.asm;
  *     4.7.23</a>
  * @author Eric Bruneton
  */
+//常量池 启动方法
 final class SymbolTable {
 
   /**

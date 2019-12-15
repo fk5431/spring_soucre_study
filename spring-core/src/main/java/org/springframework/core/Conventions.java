@@ -67,6 +67,7 @@ public final class Conventions {
 		boolean pluralize = false;
 
 		if (value.getClass().isArray()) {
+			//得到数组的组件类型class
 			valueClass = value.getClass().getComponentType();
 			pluralize = true;
 		}
@@ -76,6 +77,7 @@ public final class Conventions {
 				throw new IllegalArgumentException(
 						"Cannot generate variable name for an empty Collection");
 			}
+			//得到 collection 的一个元素
 			Object valueToCheck = peekAhead(collection);
 			valueClass = getClassForValue(valueToCheck);
 			pluralize = true;
@@ -275,6 +277,7 @@ public final class Conventions {
 		if (Proxy.isProxyClass(valueClass)) {
 			Class<?>[] ifcs = valueClass.getInterfaces();
 			for (Class<?> ifc : ifcs) {
+				//不是Java中的类
 				if (!ClassUtils.isJavaLanguageInterface(ifc)) {
 					return ifc;
 				}

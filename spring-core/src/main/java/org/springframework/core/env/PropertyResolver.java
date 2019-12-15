@@ -27,6 +27,7 @@ import org.springframework.lang.Nullable;
  * @see Environment
  * @see PropertySourcesPropertyResolver
  */
+//env 基础属性，定义基础的接口
 public interface PropertyResolver {
 
 	/**

@@ -30,6 +30,7 @@ import java.util.Base64;
  * @since 4.1
  * @see java.util.Base64
  */
+//封装了 base64
 public abstract class Base64Utils {
 
 	private static final Charset DEFAULT_CHARSET = StandardCharsets.UTF_8;

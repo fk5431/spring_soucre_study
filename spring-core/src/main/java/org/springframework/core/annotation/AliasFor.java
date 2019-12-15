@@ -184,6 +184,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 @Documented
+//别名注解
 public @interface AliasFor {
 
 	/**

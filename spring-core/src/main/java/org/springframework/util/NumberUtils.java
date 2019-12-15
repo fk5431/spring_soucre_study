@@ -36,6 +36,7 @@ import org.springframework.lang.Nullable;
  * @author Rob Harrop
  * @since 1.1.2
  */
+//所有的数字类型都继承玉于 Number  数字类型的工具类
 public abstract class NumberUtils {
 
 	private static final BigInteger LONG_MIN = BigInteger.valueOf(Long.MIN_VALUE);

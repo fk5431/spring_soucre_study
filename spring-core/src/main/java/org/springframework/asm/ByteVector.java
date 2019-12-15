@@ -33,6 +33,7 @@ package org.springframework.asm;
  *
  * @author Eric Bruneton
  */
+//一个可动态扩展的字节向量。此类大致相当于BytearrayOutputStream之上的DataOutputStream，但效率更高。
 public class ByteVector {
 
   /** The content of this vector. Only the first {@link #length} bytes contain real data. */

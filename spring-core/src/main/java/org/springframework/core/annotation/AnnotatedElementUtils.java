@@ -95,6 +95,7 @@ import org.springframework.util.MultiValueMap;
  * @see AnnotationUtils
  * @see BridgeMethodResolver
  */
+//支持注解属性的覆盖(这个工具类产生的结果是全面支持@AliasFor的功能的,它支持了属性覆盖,借助AnnotationUtils.synthesizeAnnotation支持了别名)
 public abstract class AnnotatedElementUtils {
 
 	/**

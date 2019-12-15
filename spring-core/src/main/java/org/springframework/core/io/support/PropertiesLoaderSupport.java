@@ -38,6 +38,7 @@ import org.springframework.util.PropertiesPersister;
  * @author Juergen Hoeller
  * @since 1.2.2
  */
+//属性加载
 public abstract class PropertiesLoaderSupport {
 
 	/** Logger available to subclasses. */
@@ -46,16 +47,19 @@ public abstract class PropertiesLoaderSupport {
 	@Nullable
 	protected Properties[] localProperties;
 
+	//覆盖
 	protected boolean localOverride = false;
 
 	@Nullable
 	private Resource[] locations;
 
+	//没找到的时候是否忽略
 	private boolean ignoreResourceNotFound = false;
 
 	@Nullable
 	private String fileEncoding;
 
+	//default属性解析直接采用的java.Util 中Properties 的加载方法
 	private PropertiesPersister propertiesPersister = new DefaultPropertiesPersister();
 
 
@@ -143,6 +147,7 @@ public abstract class PropertiesLoaderSupport {
 	 * Return a merged Properties instance containing both the
 	 * loaded properties and properties set on this FactoryBean.
 	 */
+	// 返回属性的复制
 	protected Properties mergeProperties() throws IOException {
 		Properties result = new Properties();
 

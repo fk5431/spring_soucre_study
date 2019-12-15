@@ -43,6 +43,7 @@ package org.springframework.util.backoff;
  * @since 4.1
  * @see BackOffExecution
  */
+//退避算法
 @FunctionalInterface
 public interface BackOff {
 

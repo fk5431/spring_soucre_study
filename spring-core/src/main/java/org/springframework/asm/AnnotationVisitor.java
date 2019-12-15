@@ -35,15 +35,18 @@ package org.springframework.asm;
  * @author Eric Bruneton
  * @author Eugene Kuleshov
  */
+//访问Java注释的访问者。必须在下面调用此类的方法
 public abstract class AnnotationVisitor {
 
   /**
    * The ASM API version implemented by this visitor. The value of this field must be one of {@link
    * Opcodes#ASM4}, {@link Opcodes#ASM5}, {@link Opcodes#ASM6} or {@link Opcodes#ASM7}.
    */
+  //此访问者实现的ASM API版本。此字段的值必须是
   protected final int api;
 
   /** The annotation visitor to which this visitor must delegate method calls. May be null. */
+  //此访问者必须委托方法调用的批注访问者。可能为空
   protected AnnotationVisitor av;
 
   /**
@@ -83,6 +86,7 @@ public abstract class AnnotationVisitor {
    *     (this is equivalent to using {@link #visitArray} and visiting each array element in turn,
    *     but is more convenient).
    */
+  //访问 注解的原始值
   public void visit(final String name, final Object value) {
     if (av != null) {
       av.visit(name, value);
@@ -96,6 +100,7 @@ public abstract class AnnotationVisitor {
    * @param descriptor the class descriptor of the enumeration class.
    * @param value the actual enumeration value.
    */
+  //访问注解的枚举
   public void visitEnum(final String name, final String descriptor, final String value) {
     if (av != null) {
       av.visitEnum(name, descriptor, value);
@@ -111,6 +116,7 @@ public abstract class AnnotationVisitor {
    *     visitor is not interested in visiting this nested annotation. <i>The nested annotation
    *     value must be fully visited before calling other methods on this annotation visitor</i>.
    */
+  //访问一个注解的注解
   public AnnotationVisitor visitAnnotation(final String name, final String descriptor) {
     if (av != null) {
       return av.visitAnnotation(name, descriptor);
@@ -129,6 +135,7 @@ public abstract class AnnotationVisitor {
    *     this visitor are ignored. <i>All the array values must be visited before calling other
    *     methods on this annotation visitor</i>.
    */
+  //访问注解的array
   public AnnotationVisitor visitArray(final String name) {
     if (av != null) {
       return av.visitArray(name);

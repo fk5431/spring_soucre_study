@@ -51,6 +51,7 @@ import java.util.Properties;
  * @see java.util.Properties#load
  * @see java.util.Properties#store
  */
+//默认实现
 public class DefaultPropertiesPersister implements PropertiesPersister {
 
 	@Override

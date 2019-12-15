@@ -38,7 +38,7 @@ import org.springframework.util.ObjectUtils;
  * @see AnnotationUtils#synthesizeAnnotation(Annotation, Object)
  */
 abstract class AbstractAliasAwareAnnotationAttributeExtractor<S> implements AnnotationAttributeExtractor<S> {
-
+	//注解的类
 	private final Class<? extends Annotation> annotationType;
 
 	@Nullable
@@ -46,6 +46,7 @@ abstract class AbstractAliasAwareAnnotationAttributeExtractor<S> implements Anno
 
 	private final S source;
 
+	//别名
 	private final Map<String, List<String>> attributeAliasMap;
 
 

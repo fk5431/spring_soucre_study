@@ -37,6 +37,8 @@ import java.util.Properties;
  * @see DefaultPropertiesPersister
  * @see java.util.Properties
  */
+//属性解析的抽象接口？
+//加载属性的抽象接口
 public interface PropertiesPersister {
 
 	/**

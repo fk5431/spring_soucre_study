@@ -57,7 +57,7 @@ public abstract class AbstractAliasAwareAnnotationAttributeExtractorTestCase {
 		Method value = ImplicitAliasesContextConfig.class.getDeclaredMethod("value");
 
 		AnnotationAttributeExtractor<?> extractor = createExtractorFor(clazz, expected, ImplicitAliasesContextConfig.class);
-
+		Object o = extractor.getAttributeValue(value);
 		assertThat(extractor.getAttributeValue(value), is(expected));
 		assertThat(extractor.getAttributeValue(groovyScript), is(expected));
 		assertThat(extractor.getAttributeValue(xmlFile), is(expected));

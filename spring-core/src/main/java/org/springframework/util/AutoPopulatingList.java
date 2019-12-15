@@ -41,6 +41,7 @@ import java.util.ListIterator;
  * @since 2.0
  * @param <E> the element type
  */
+//可自动填充元素的list  get的时候 如果没有，就增加一个
 @SuppressWarnings("serial")
 public class AutoPopulatingList<E> implements List<E>, Serializable {
 

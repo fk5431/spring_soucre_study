@@ -35,6 +35,7 @@ import org.springframework.util.Assert;
 public abstract class DecoratingClassLoader extends ClassLoader {
 
 	static {
+		//并行加载
 		ClassLoader.registerAsParallelCapable();
 	}
 

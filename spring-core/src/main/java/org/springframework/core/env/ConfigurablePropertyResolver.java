@@ -28,6 +28,7 @@ import org.springframework.lang.Nullable;
  * @author Chris Beams
  * @since 3.1
  */
+//转换属性值
 public interface ConfigurablePropertyResolver extends PropertyResolver {
 
 	/**

@@ -30,6 +30,7 @@ import org.springframework.lang.Nullable;
  * @author Dave Syer
  * @since 3.0.5
  */
+//序列化 反序列化的工具
 public abstract class SerializationUtils {
 
 	/**

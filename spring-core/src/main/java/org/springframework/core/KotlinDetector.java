@@ -32,6 +32,7 @@ import org.springframework.util.ClassUtils;
  * @since 5.0
  */
 @SuppressWarnings("unchecked")
+// 和 kotlin有关
 public abstract class KotlinDetector {
 
 	private static final Log logger = LogFactory.getLog(KotlinDetector.class);

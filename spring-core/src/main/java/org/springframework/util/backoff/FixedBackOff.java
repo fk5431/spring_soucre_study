@@ -35,8 +35,10 @@ public class FixedBackOff implements BackOff {
 	 */
 	public static final long UNLIMITED_ATTEMPTS = Long.MAX_VALUE;
 
+	//间隔
 	private long interval = DEFAULT_INTERVAL;
 
+	//最大次数
 	private long maxAttempts = UNLIMITED_ATTEMPTS;
 
 

@@ -77,11 +77,11 @@ public class ExponentialBackOff implements BackOff {
 
 	private long initialInterval = DEFAULT_INITIAL_INTERVAL;
 
-	private double multiplier = DEFAULT_MULTIPLIER;
+	private double multiplier = DEFAULT_MULTIPLIER;//递增倍数
 
-	private long maxInterval = DEFAULT_MAX_INTERVAL;
+	private long maxInterval = DEFAULT_MAX_INTERVAL;//最大间隔
 
-	private long maxElapsedTime = DEFAULT_MAX_ELAPSED_TIME;
+	private long maxElapsedTime = DEFAULT_MAX_ELAPSED_TIME;//最大时间间隔
 
 
 	/**

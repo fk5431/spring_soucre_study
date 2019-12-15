@@ -151,6 +151,7 @@ public class MethodInvoker {
 	 * @see #getPreparedMethod
 	 * @see #invoke
 	 */
+	//预处理 特殊的方法
 	public void prepare() throws ClassNotFoundException, NoSuchMethodException {
 		if (this.staticMethod != null) {
 			int lastDotIndex = this.staticMethod.lastIndexOf('.');

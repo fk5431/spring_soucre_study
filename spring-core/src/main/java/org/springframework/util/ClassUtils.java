@@ -53,37 +53,39 @@ import org.springframework.lang.Nullable;
  * @see TypeUtils
  * @see ReflectionUtils
  */
+//提供了很多缓存数据和初始化内容
 public abstract class ClassUtils {
 
 	/** Suffix for array class names: {@code "[]"}. */
-	public static final String ARRAY_SUFFIX = "[]";
+	public static final String ARRAY_SUFFIX = "[]";//数组后缀
 
 	/** Prefix for internal array class names: {@code "["}. */
-	private static final String INTERNAL_ARRAY_PREFIX = "[";
+	private static final String INTERNAL_ARRAY_PREFIX = "[";//内部数组前缀
 
 	/** Prefix for internal non-primitive array class names: {@code "[L"}. */
-	private static final String NON_PRIMITIVE_ARRAY_PREFIX = "[L";
+	private static final String NON_PRIMITIVE_ARRAY_PREFIX = "[L";//非原语数组前缀
 
 	/** The package separator character: {@code '.'}. */
-	private static final char PACKAGE_SEPARATOR = '.';
+	private static final char PACKAGE_SEPARATOR = '.';//包分隔符
 
 	/** The path separator character: {@code '/'}. */
-	private static final char PATH_SEPARATOR = '/';
+	private static final char PATH_SEPARATOR = '/';//路径分隔符
 
 	/** The inner class separator character: {@code '$'}. */
-	private static final char INNER_CLASS_SEPARATOR = '$';
+	private static final char INNER_CLASS_SEPARATOR = '$';//内部类分隔符
 
 	/** The CGLIB class separator: {@code "$$"}. */
-	public static final String CGLIB_CLASS_SEPARATOR = "$$";
+	public static final String CGLIB_CLASS_SEPARATOR = "$$";//代理类的分隔符
 
 	/** The ".class" file suffix. */
-	public static final String CLASS_FILE_SUFFIX = ".class";
+	public static final String CLASS_FILE_SUFFIX = ".class";//类后缀
 
 
 	/**
 	 * Map with primitive wrapper type as key and corresponding primitive
 	 * type as value, for example: Integer.class -> int.class.
 	 */
+	//基本包装类型的健值对
 	private static final Map<Class<?>, Class<?>> primitiveWrapperTypeMap = new IdentityHashMap<>(8);
 
 	/**
@@ -102,12 +104,14 @@ public abstract class ClassUtils {
 	 * Map with common Java language class name as key and corresponding Class as value.
 	 * Primarily for efficient deserialization of remote invocations.
 	 */
+	//以java语言类命名的作为key
 	private static final Map<String, Class<?>> commonClassCache = new HashMap<>(64);
 
 	/**
 	 * Common Java language interfaces which are supposed to be ignored
 	 * when searching for 'primary' user-level interfaces.
 	 */
+
 	private static final Set<Class<?>> javaLanguageInterfaces;
 
 
@@ -207,6 +211,7 @@ public abstract class ClassUtils {
 	 * @param classLoaderToUse the actual ClassLoader to use for the thread context
 	 * @return the original thread context ClassLoader, or {@code null} if not overridden
 	 */
+	//使用环境的类加载器覆盖当前线程的类加载器，
 	@Nullable
 	public static ClassLoader overrideThreadContextClassLoader(@Nullable ClassLoader classLoaderToUse) {
 		Thread currentThread = Thread.currentThread();
@@ -233,6 +238,7 @@ public abstract class ClassUtils {
 	 * @throws LinkageError if the class file could not be loaded
 	 * @see Class#forName(String, boolean, ClassLoader)
 	 */
+	//通过name 和 类加载器去返回类
 	public static Class<?> forName(String name, @Nullable ClassLoader classLoader)
 			throws ClassNotFoundException, LinkageError {
 
@@ -253,7 +259,7 @@ public abstract class ClassUtils {
 			return Array.newInstance(elementClass, 0).getClass();
 		}
 
-		// "[Ljava.lang.String;" style arrays
+		// "[Ljava.lang.String;" style arrays  非原语数组
 		if (name.startsWith(NON_PRIMITIVE_ARRAY_PREFIX) && name.endsWith(";")) {
 			String elementName = name.substring(NON_PRIMITIVE_ARRAY_PREFIX.length(), name.length() - 1);
 			Class<?> elementClass = forName(elementName, classLoader);
@@ -272,11 +278,13 @@ public abstract class ClassUtils {
 			clToUse = getDefaultClassLoader();
 		}
 		try {
+			//返回类
 			return Class.forName(name, false, clToUse);
 		}
 		catch (ClassNotFoundException ex) {
 			int lastDotIndex = name.lastIndexOf(PACKAGE_SEPARATOR);
 			if (lastDotIndex != -1) {
+				//内部类
 				String innerClassName =
 						name.substring(0, lastDotIndex) + INNER_CLASS_SEPARATOR + name.substring(lastDotIndex + 1);
 				try {

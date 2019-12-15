@@ -33,8 +33,10 @@ import org.springframework.lang.Nullable;
  * @see org.springframework.scheduling.concurrent.CustomizableThreadFactory
  */
 @SuppressWarnings("serial")
+//创建线程
 public class CustomizableThreadCreator implements Serializable {
 
+	//线程名字前缀
 	private String threadNamePrefix;
 
 	private int threadPriority = Thread.NORM_PRIORITY;

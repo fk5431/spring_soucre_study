@@ -40,6 +40,7 @@ import org.springframework.util.Assert;
  * @see InputStreamResource
  * @see org.springframework.mail.javamail.MimeMessageHelper#addAttachment(String, InputStreamSource)
  */
+//导入字节的资源 相当于存储类byte数组 和 描述？？
 public class ByteArrayResource extends AbstractResource {
 
 	private final byte[] byteArray;

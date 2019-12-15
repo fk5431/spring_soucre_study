@@ -60,6 +60,7 @@ import org.springframework.lang.Nullable;
  * @param <K> the key type
  * @param <V> the value type
  */
+//能存放对象引用级别
 public class ConcurrentReferenceHashMap<K, V> extends AbstractMap<K, V> implements ConcurrentMap<K, V> {
 
 	private static final int DEFAULT_INITIAL_CAPACITY = 16;

@@ -44,15 +44,18 @@ import org.apache.commons.logging.LogFactory;
  * @see java.io.Serializable
  */
 @SuppressWarnings("serial")
+//对特定资源并发访问
 public abstract class ConcurrencyThrottleSupport implements Serializable {
 
 	/**
 	 * Permit any number of concurrent invocations: that is, don't throttle concurrency.
+	 * 默认-1 不限制并发
 	 */
 	public static final int UNBOUNDED_CONCURRENCY = -1;
 
 	/**
 	 * Switch concurrency 'off': that is, don't allow any concurrent invocations.
+	 * 不允许并发调用
 	 */
 	public static final int NO_CONCURRENCY = 0;
 
@@ -62,6 +65,7 @@ public abstract class ConcurrencyThrottleSupport implements Serializable {
 
 	private transient Object monitor = new Object();
 
+	//并发限制
 	private int concurrencyLimit = UNBOUNDED_CONCURRENCY;
 
 	private int concurrencyCount = 0;
@@ -103,6 +107,7 @@ public abstract class ConcurrencyThrottleSupport implements Serializable {
 	 * @see #afterAccess()
 	 */
 	protected void beforeAccess() {
+		//并发数不能等于0
 		if (this.concurrencyLimit == NO_CONCURRENCY) {
 			throw new IllegalStateException(
 					"Currently no invocations allowed - concurrency limit set to NO_CONCURRENCY");

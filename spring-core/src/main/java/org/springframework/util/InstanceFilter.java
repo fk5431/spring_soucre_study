@@ -32,6 +32,7 @@ import org.springframework.lang.Nullable;
  * @since 4.1
  * @param <T> the instance type
  */
+//实例过滤器 匹配在不在集合里
 public class InstanceFilter<T> {
 
 	private final Collection<? extends T> includes;

@@ -30,6 +30,7 @@ import org.springframework.util.Assert;
  * @author Arjen Poutsma
  * @since 3.0.3
  */
+//比较异常类的大小，根据类继承的深度来
 public class ExceptionDepthComparator implements Comparator<Class<? extends Throwable>> {
 
 	private final Class<? extends Throwable> targetException;

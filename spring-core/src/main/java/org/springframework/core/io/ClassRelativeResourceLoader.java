@@ -28,6 +28,7 @@ import org.springframework.util.StringUtils;
  * @see Class#getResource(String)
  * @see ClassPathResource#ClassPathResource(String, Class)
  */
+//具有从给定的class所在的路径下加载资源的能力
 public class ClassRelativeResourceLoader extends DefaultResourceLoader {
 
 	private final Class<?> clazz;
@@ -53,6 +54,7 @@ public class ClassRelativeResourceLoader extends DefaultResourceLoader {
 	 * ClassPathResource that explicitly expresses a context-relative path
 	 * through implementing the ContextResource interface.
 	 */
+	//实现ContextResource 显示表示上下文相关路径的ClassPathResource
 	private static class ClassRelativeContextResource extends ClassPathResource implements ContextResource {
 
 		private final Class<?> clazz;

@@ -45,6 +45,7 @@ import org.springframework.util.ReflectionUtils;
  * @author Phillip Webb
  * @since 2.0
  */
+//处理桥接方法相关的
 public final class BridgeMethodResolver {
 
 	private BridgeMethodResolver() {

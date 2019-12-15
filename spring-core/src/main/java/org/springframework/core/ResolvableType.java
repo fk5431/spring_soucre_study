@@ -80,6 +80,7 @@ import org.springframework.util.StringUtils;
  * @see ResolvableTypeProvider
  */
 @SuppressWarnings("serial")
+//类型解析器
 public class ResolvableType implements Serializable {
 
 	/**

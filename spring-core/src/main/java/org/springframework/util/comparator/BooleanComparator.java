@@ -26,6 +26,7 @@ import java.util.Comparator;
  * @author Keith Donald
  * @since 1.2.2
  */
+//boolean 比较
 @SuppressWarnings("serial")
 public class BooleanComparator implements Comparator<Boolean>, Serializable {
 

@@ -25,6 +25,7 @@ import org.springframework.lang.Nullable;
  * @author Rob Harrop
  * @since 2.0
  */
+//定义了对对象元数据访问的抽象接口
 public interface AttributeAccessor {
 
 	/**

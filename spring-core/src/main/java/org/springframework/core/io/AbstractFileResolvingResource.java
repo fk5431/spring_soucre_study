@@ -40,6 +40,7 @@ import org.springframework.util.ResourceUtils;
  * @author Juergen Hoeller
  * @since 3.0
  */
+//将URL解析为文件引用的资源的抽象基类
 public abstract class AbstractFileResolvingResource extends AbstractResource {
 
 	@Override

@@ -24,6 +24,7 @@ import java.util.UUID;
  * @author Rossen Stoyanchev
  * @since 4.0
  */
+//通用唯一标识符生成合同
 public interface IdGenerator {
 
 	/**

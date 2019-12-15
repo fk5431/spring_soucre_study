@@ -34,6 +34,7 @@ import org.springframework.util.ReflectionUtils;
  * @see MapAnnotationAttributeExtractor
  * @see AnnotationUtils#synthesizeAnnotation
  */
+//默认的实现
 class DefaultAnnotationAttributeExtractor extends AbstractAliasAwareAnnotationAttributeExtractor<Annotation> {
 
 	/**

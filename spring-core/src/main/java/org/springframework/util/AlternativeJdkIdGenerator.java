@@ -31,6 +31,7 @@ import java.util.UUID;
  * @author Rob Winch
  * @since 4.0
  */
+//生产UUID
 public class AlternativeJdkIdGenerator implements IdGenerator {
 
 	private final Random random;
@@ -46,7 +47,7 @@ public class AlternativeJdkIdGenerator implements IdGenerator {
 
 	@Override
 	public UUID generateId() {
-		byte[] randomBytes = new byte[16];
+		byte[] randomBytes = new byte[16];//随机16位
 		this.random.nextBytes(randomBytes);
 
 		long mostSigBits = 0;

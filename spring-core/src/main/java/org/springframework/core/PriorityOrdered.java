@@ -38,6 +38,7 @@ package org.springframework.core;
  * @see org.springframework.beans.factory.config.PropertyOverrideConfigurer
  * @see org.springframework.beans.factory.config.PropertyPlaceholderConfigurer
  */
+//继承了ordered，若一个类实现ordered，一个实现PriorityOrdered，则实现PriorityOrdered的优先级高
 public interface PriorityOrdered extends Ordered {
 
 }

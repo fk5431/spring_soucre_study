@@ -54,6 +54,7 @@ import org.springframework.util.StringUtils;
  * @see java.io.File
  * @see java.nio.file.Files
  */
+//系统文件的资源 一些基本属性的实现
 public class FileSystemResource extends AbstractResource implements WritableResource {
 
 	private final String path;

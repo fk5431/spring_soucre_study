@@ -41,6 +41,7 @@ import org.springframework.util.ResourceUtils;
  * @author Juergen Hoeller
  * @since 28.12.2003
  */
+//实现resource 没有具体的实现，包了一层
 public abstract class AbstractResource implements Resource {
 
 	/**

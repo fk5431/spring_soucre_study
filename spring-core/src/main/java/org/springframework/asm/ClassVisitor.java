@@ -36,6 +36,7 @@ package org.springframework.asm;
  *
  * @author Eric Bruneton
  */
+//访问java类的访问者
 public abstract class ClassVisitor {
 
   /**
