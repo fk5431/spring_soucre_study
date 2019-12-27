@@ -26,6 +26,7 @@ package org.springframework.beans.factory;
  * @since 2.0
  * @see BeanNameAware
  */
+// 避免和springIOC 和 AOP 一起使用bean的Name
 public interface NamedBean {
 
 	/**

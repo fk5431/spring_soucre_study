@@ -28,6 +28,7 @@ import org.springframework.lang.Nullable;
  * @author Juergen Hoeller
  * @since 2.5
  */
+//简单点的实现
 public class SimpleAutowireCandidateResolver implements AutowireCandidateResolver {
 
 	@Override

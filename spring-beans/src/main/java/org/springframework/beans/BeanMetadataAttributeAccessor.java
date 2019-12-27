@@ -28,6 +28,8 @@ import org.springframework.lang.Nullable;
  * @since 2.5
  */
 @SuppressWarnings("serial")
+//实现了 BeanMetadataElement  继承了 AttributeAccessorSupport
+//AttributeAccessorSupport 通过linkHashMap来实现对 attribute的key value的存储，实现BeanMetadataElement 可以设置源对象
 public class BeanMetadataAttributeAccessor extends AttributeAccessorSupport implements BeanMetadataElement {
 
 	@Nullable

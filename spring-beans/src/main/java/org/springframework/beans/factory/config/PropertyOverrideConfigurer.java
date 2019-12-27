@@ -62,6 +62,7 @@ import org.springframework.beans.factory.BeanInitializationException;
  * @see #convertPropertyValue
  * @see PropertyPlaceholderConfigurer
  */
+//利用属性文件的相关信息,覆盖XML 配置文件中定义
 public class PropertyOverrideConfigurer extends PropertyResourceConfigurer {
 
 	/**

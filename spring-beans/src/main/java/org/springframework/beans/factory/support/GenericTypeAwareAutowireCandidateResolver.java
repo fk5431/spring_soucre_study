@@ -42,6 +42,7 @@ import org.springframework.util.ClassUtils;
  * @author Juergen Hoeller
  * @since 4.0
  */
+//根据泛型类型进行匹配
 public class GenericTypeAwareAutowireCandidateResolver extends SimpleAutowireCandidateResolver
 		implements BeanFactoryAware {
 
@@ -66,6 +67,7 @@ public class GenericTypeAwareAutowireCandidateResolver extends SimpleAutowireCan
 			// If explicitly false, do not proceed with any other checks...
 			return false;
 		}
+		// 处理泛型依赖的核心方法
 		return checkGenericTypeMatch(bdHolder, descriptor);
 	}
 

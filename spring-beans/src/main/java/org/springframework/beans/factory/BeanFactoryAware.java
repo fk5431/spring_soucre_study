@@ -38,6 +38,7 @@ import org.springframework.beans.BeansException;
  * @see InitializingBean
  * @see org.springframework.context.ApplicationContextAware
  */
+//感知beanfactory，可以通过实现beanfactoryAware 来setBeanFactory，去动态的获取（感知）spring管理的bean
 public interface BeanFactoryAware extends Aware {
 
 	/**

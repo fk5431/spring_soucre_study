@@ -39,6 +39,7 @@ import org.springframework.util.ReflectionUtils;
  * @since 1.1
  * @see org.springframework.beans.BeanWrapperImpl#convertIfNecessary
  */
+//灵活的参数，适用于重载的方法？
 public class ArgumentConvertingMethodInvoker extends MethodInvoker {
 
 	@Nullable

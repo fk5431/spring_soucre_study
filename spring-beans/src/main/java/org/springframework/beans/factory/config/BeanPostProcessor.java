@@ -40,6 +40,7 @@ import org.springframework.lang.Nullable;
  * @see ConfigurableBeanFactory#addBeanPostProcessor
  * @see BeanFactoryPostProcessor
  */
+//bean的后置处理器，定义了两个方法，可以在bean初始化前后去执行对应的方法
 public interface BeanPostProcessor {
 
 	/**

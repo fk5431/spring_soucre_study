@@ -45,6 +45,7 @@ import org.springframework.util.ReflectionUtils;
  * @author Juergen Hoeller
  * @since 2.5
  */
+//注入元数据，包含了目标Bean的Class对象，和注入元素（InjectionElement）集合.
 public class InjectionMetadata {
 
 	private static final Log logger = LogFactory.getLog(InjectionMetadata.class);
@@ -115,7 +116,7 @@ public class InjectionMetadata {
 
 	/**
 	 * A single injected element.
-	 */
+	 *///注入元素
 	public abstract static class InjectedElement {
 
 		protected final Member member;

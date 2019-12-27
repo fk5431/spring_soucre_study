@@ -93,6 +93,7 @@ import org.springframework.util.ClassUtils;
  * @see ConfigurableBeanFactory#registerCustomEditor
  * @see org.springframework.validation.DataBinder#registerCustomEditor
  */
+//自定义属性编辑器
 public class CustomEditorConfigurer implements BeanFactoryPostProcessor, Ordered {
 
 	protected final Log logger = LogFactory.getLog(getClass());

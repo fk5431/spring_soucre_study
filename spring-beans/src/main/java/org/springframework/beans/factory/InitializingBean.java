@@ -31,6 +31,7 @@ package org.springframework.beans.factory;
  * @see org.springframework.beans.factory.config.BeanDefinition#getPropertyValues()
  * @see org.springframework.beans.factory.support.AbstractBeanDefinition#getInitMethodName()
  */
+//为bean提供初始化方法，bean初始化的时候会执行afterPropertiesSet
 public interface InitializingBean {
 
 	/**

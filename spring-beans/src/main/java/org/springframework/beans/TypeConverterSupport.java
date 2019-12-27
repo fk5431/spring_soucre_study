@@ -33,6 +33,7 @@ import org.springframework.util.Assert;
  * @since 3.2
  * @see SimpleTypeConverter
  */
+//类型转换的默认实现
 public abstract class TypeConverterSupport extends PropertyEditorRegistrySupport implements TypeConverter {
 
 	@Nullable

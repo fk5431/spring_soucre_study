@@ -106,7 +106,7 @@ public abstract class AbstractNestablePropertyAccessor extends AbstractPropertyA
 	 * (can be suppressed if the accessor won't need any type conversion)
 	 * @see #setWrappedInstance
 	 */
-	//创建空的防蚊器
+	//创建空的
 	protected AbstractNestablePropertyAccessor(boolean registerDefaultEditors) {
 		if (registerDefaultEditors) {
 			registerDefaultEditors();

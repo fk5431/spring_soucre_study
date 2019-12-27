@@ -35,6 +35,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
  * @since 2.5
  * @see org.springframework.beans.factory.config.ConfigurableBeanFactory#getMergedBeanDefinition
  */
+//bean实例化之后回调的接口
 public interface MergedBeanDefinitionPostProcessor extends BeanPostProcessor {
 
 	/**

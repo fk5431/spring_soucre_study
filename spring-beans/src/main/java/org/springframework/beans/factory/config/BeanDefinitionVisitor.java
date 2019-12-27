@@ -45,6 +45,7 @@ import org.springframework.util.StringValueResolver;
  * @see BeanDefinition#getConstructorArgumentValues
  * @see PlaceholderConfigurerSupport
  */
+//遍历bean的各个属性用properties填充,委托给你StringValueResolver执行
 public class BeanDefinitionVisitor {
 
 	@Nullable

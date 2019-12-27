@@ -47,6 +47,7 @@ import org.springframework.util.ClassUtils;
  * @since 2.5
  * @see org.springframework.beans.factory.annotation.Qualifier
  */
+//允许注册自己的自定义限定符注解类 ??
 public class CustomAutowireConfigurer implements BeanFactoryPostProcessor, BeanClassLoaderAware, Ordered {
 
 	private int order = Ordered.LOWEST_PRECEDENCE;  // default: same as non-Ordered

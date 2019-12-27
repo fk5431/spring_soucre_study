@@ -35,6 +35,7 @@ package org.springframework.beans.factory;
  * @see BeanFactoryAware
  * @see InitializingBean
  */
+//感知bean的类加载器
 public interface BeanClassLoaderAware extends Aware {
 
 	/**

@@ -83,6 +83,7 @@ import org.springframework.util.StringUtils;
  * @see #setTargetBeanName
  * @see #setPropertyPath
  */
+//用于获取目标bean的属性值,获取的值可以注入成一个bean实例
 public class PropertyPathFactoryBean implements FactoryBean<Object>, BeanNameAware, BeanFactoryAware {
 
 	private static final Log logger = LogFactory.getLog(PropertyPathFactoryBean.class);

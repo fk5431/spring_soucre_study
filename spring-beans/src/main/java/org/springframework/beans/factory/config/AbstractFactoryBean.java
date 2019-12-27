@@ -60,6 +60,7 @@ import org.springframework.util.ReflectionUtils;
  * @see #setSingleton
  * @see #createInstance()
  */
+//抽象工厂bean
 public abstract class AbstractFactoryBean<T>
 		implements FactoryBean<T>, BeanClassLoaderAware, BeanFactoryAware, InitializingBean, DisposableBean {
 

@@ -74,6 +74,7 @@ import org.springframework.beans.factory.config.BeanReference;
  * @see BeanComponentDefinition
  * @see ReaderEventListener#componentRegistered(ComponentDefinition)
  */
+//组件定义？
 public interface ComponentDefinition extends BeanMetadataElement {
 
 	/**

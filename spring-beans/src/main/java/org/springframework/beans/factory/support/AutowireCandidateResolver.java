@@ -28,6 +28,7 @@ import org.springframework.lang.Nullable;
  * @author Mark Fisher
  * @since 2.5
  */
+//策略接口，确定bean是是否符合特定的依赖项
 public interface AutowireCandidateResolver {
 
 	/**
@@ -40,6 +41,7 @@ public interface AutowireCandidateResolver {
 	 * @return whether the bean definition qualifies as autowire candidate
 	 * @see org.springframework.beans.factory.config.BeanDefinition#isAutowireCandidate()
 	 */
+	// 判断给定的bean定义是否允许被依赖注入（bean定义的默认值都是true）
 	default boolean isAutowireCandidate(BeanDefinitionHolder bdHolder, DependencyDescriptor descriptor) {
 		return bdHolder.getBeanDefinition().isAutowireCandidate();
 	}

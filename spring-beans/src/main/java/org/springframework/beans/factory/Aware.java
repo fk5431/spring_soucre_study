@@ -32,6 +32,7 @@ package org.springframework.beans.factory;
  * @author Juergen Hoeller
  * @since 3.1
  */
+//标记接口，实现标记接口的大部分都是帮助springbean访问spring容器
 public interface Aware {
 
 }

@@ -30,6 +30,7 @@ import org.springframework.util.Assert;
  * @see org.springframework.beans.factory.annotation.Qualifier
  */
 @SuppressWarnings("serial")
+//自动导入时候有多个子类的实现可导入
 public class AutowireCandidateQualifier extends BeanMetadataAttributeAccessor {
 
 	/**

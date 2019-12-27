@@ -42,6 +42,7 @@ import org.springframework.util.StringUtils;
  * @since 13 May 2001
  */
 @SuppressWarnings("serial")
+//可变的属性值，
 public class MutablePropertyValues implements PropertyValues, Serializable {
 
 	private final List<PropertyValue> propertyValueList;
@@ -68,6 +69,7 @@ public class MutablePropertyValues implements PropertyValues, Serializable {
 	 * @param original the PropertyValues to copy
 	 * @see #addPropertyValues(PropertyValues)
 	 */
+	//初始化了propertyValueList
 	public MutablePropertyValues(@Nullable PropertyValues original) {
 		// We can optimize this because it's all new:
 		// There is no replacement of existing property values.
@@ -88,6 +90,7 @@ public class MutablePropertyValues implements PropertyValues, Serializable {
 	 * @param original a Map with property values keyed by property name Strings
 	 * @see #addPropertyValues(Map)
 	 */
+	//name value 初始化
 	public MutablePropertyValues(@Nullable Map<?, ?> original) {
 		// We can optimize this because it's all new:
 		// There is no replacement of existing property values.

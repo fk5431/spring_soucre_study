@@ -35,10 +35,12 @@ import org.springframework.util.ClassUtils;
  * @see Configurable
  * @see org.springframework.beans.factory.wiring.ClassNameBeanWiringInfoResolver
  */
+//使用可配置的注释来标识哪些类需要自动连接
 public class AnnotationBeanWiringInfoResolver implements BeanWiringInfoResolver {
 
 	@Override
 	@Nullable
+	//判断有没有Configurable
 	public BeanWiringInfo resolveWiringInfo(Object beanInstance) {
 		Assert.notNull(beanInstance, "Bean instance must not be null");
 		Configurable annotation = beanInstance.getClass().getAnnotation(Configurable.class);

@@ -74,6 +74,7 @@ import org.springframework.util.ReflectionUtils;
  * @see #setDestroyAnnotationType
  */
 @SuppressWarnings("serial")
+//完成@PostConstruct注解的初始化方法调用
 public class InitDestroyAnnotationBeanPostProcessor
 		implements DestructionAwareBeanPostProcessor, MergedBeanDefinitionPostProcessor, PriorityOrdered, Serializable {
 

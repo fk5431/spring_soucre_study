@@ -27,6 +27,7 @@ import org.springframework.util.ObjectUtils;
  * @author Juergen Hoeller
  * @since 2.5
  */
+//定义键值对的属性，实现了BeanMetadataElement，可以获得该属性的源
 public class BeanMetadataAttribute implements BeanMetadataElement {
 
 	private final String name;

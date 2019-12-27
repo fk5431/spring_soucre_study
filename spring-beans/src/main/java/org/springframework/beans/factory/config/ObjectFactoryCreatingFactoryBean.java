@@ -112,6 +112,7 @@ public class ObjectFactoryCreatingFactoryBean extends AbstractFactoryBean<Object
 		this.targetBeanName = targetBeanName;
 	}
 
+	//初始化
 	@Override
 	public void afterPropertiesSet() throws Exception {
 		Assert.hasText(this.targetBeanName, "Property 'targetBeanName' is required");

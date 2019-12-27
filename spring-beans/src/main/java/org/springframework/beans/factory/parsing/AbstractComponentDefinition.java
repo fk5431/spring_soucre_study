@@ -30,6 +30,7 @@ import org.springframework.beans.factory.config.BeanReference;
  * @author Juergen Hoeller
  * @since 2.0
  */
+//抽象类
 public abstract class AbstractComponentDefinition implements ComponentDefinition {
 
 	/**

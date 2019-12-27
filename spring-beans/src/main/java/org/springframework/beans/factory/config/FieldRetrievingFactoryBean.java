@@ -55,6 +55,7 @@ import org.springframework.util.StringUtils;
  * @since 1.1
  * @see #setStaticField
  */
+//提供了filed的值注入和method的返回值注入。
 public class FieldRetrievingFactoryBean
 		implements FactoryBean<Object>, BeanNameAware, BeanClassLoaderAware, InitializingBean {
 
@@ -166,19 +167,23 @@ public class FieldRetrievingFactoryBean
 	}
 
 
+	//初始化
 	@Override
 	public void afterPropertiesSet() throws ClassNotFoundException, NoSuchFieldException {
+		//两个只能存在一个
 		if (this.targetClass != null && this.targetObject != null) {
 			throw new IllegalArgumentException("Specify either targetClass or targetObject, not both");
 		}
 
 		if (this.targetClass == null && this.targetObject == null) {
+			//都为空 field不能为空
 			if (this.targetField != null) {
 				throw new IllegalArgumentException(
 						"Specify targetClass or targetObject in combination with targetField");
 			}
 
 			// If no other property specified, consider bean name as static field expression.
+			//staticField也不能为空
 			if (this.staticField == null) {
 				this.staticField = this.beanName;
 				Assert.state(this.staticField != null, "No target field specified");
@@ -191,6 +196,7 @@ public class FieldRetrievingFactoryBean
 						"staticField must be a fully qualified class plus static field name: " +
 						"e.g. 'example.MyExampleClass.MY_EXAMPLE_FIELD'");
 			}
+			//得到 对应class 和 field
 			String className = this.staticField.substring(0, lastDotIndex);
 			String fieldName = this.staticField.substring(lastDotIndex + 1);
 			this.targetClass = ClassUtils.forName(className, this.beanClassLoader);

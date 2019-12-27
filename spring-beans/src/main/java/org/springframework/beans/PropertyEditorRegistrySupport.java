@@ -89,6 +89,7 @@ import org.springframework.util.ClassUtils;
  * @see java.beans.PropertyEditorSupport#setAsText
  * @see java.beans.PropertyEditorSupport#setValue
  */
+//PropertyEditorRegistry的基本实现，负责默认编辑器和自定义编辑器的管理
 public class PropertyEditorRegistrySupport implements PropertyEditorRegistry {
 
 	@Nullable
@@ -99,13 +100,13 @@ public class PropertyEditorRegistrySupport implements PropertyEditorRegistry {
 	private boolean configValueEditorsActive = false;
 
 	@Nullable
-	private Map<Class<?>, PropertyEditor> defaultEditors;
+	private Map<Class<?>, PropertyEditor> defaultEditors;//默认编辑器
 
 	@Nullable
-	private Map<Class<?>, PropertyEditor> overriddenDefaultEditors;
+	private Map<Class<?>, PropertyEditor> overriddenDefaultEditors;//覆盖默认
 
 	@Nullable
-	private Map<Class<?>, PropertyEditor> customEditors;
+	private Map<Class<?>, PropertyEditor> customEditors;//自定义编辑器
 
 	@Nullable
 	private Map<String, CustomEditorHolder> customEditorsForPath;

@@ -31,6 +31,7 @@ public class NamedBeanHolder<T> implements NamedBean {
 
 	private final String beanName;
 
+	//Bean的实例
 	private final T beanInstance;
 
 

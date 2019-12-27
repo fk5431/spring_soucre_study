@@ -52,6 +52,7 @@ import org.springframework.util.StringUtils;
  * @see BeanWrapperImpl
  * @see SimpleTypeConverter
  */
+//类型转换委托
 class TypeConverterDelegate {
 
 	private static final Log logger = LogFactory.getLog(TypeConverterDelegate.class);
